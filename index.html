@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PicPeel — Extract Images from PDF Online Free: Download the Original Images</title>
+<meta name="description" content="Free PDF image extractor. Pull the original embedded photos and graphics out of any PDF at full quality, with an inventory of size, format and page — no re-rendering.">
+<link rel="canonical" href="https://picpeel.fixoraa.tech/">
+<meta property="og:title" content="PicPeel — Extract Images from PDF Online Free: Download the Original Images">
+<meta property="og:description" content="Free PDF image extractor. Pull the original embedded photos and graphics out of any PDF at full quality, with an inventory of size, format and page — no re-rendering.">
+<meta property="og:url" content="https://picpeel.fixoraa.tech/">
+<meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script>pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';</script>
+<style>
+:root{--pri:#B45309;--acc:#0EA5E9;--bgc:#FFFBEB}
+body{background:var(--bgc);font-family:'Segoe UI',system-ui,sans-serif}
+.pri{background:var(--pri)} .prit{color:var(--pri)}
+.btn{background:var(--pri);color:#fff;padding:.6rem 1.2rem;border-radius:.6rem;font-weight:600;cursor:pointer;border:none}
+.btn:hover{opacity:.9} .btn2{background:var(--acc);color:#111;padding:.6rem 1.2rem;border-radius:.6rem;font-weight:600;cursor:pointer;border:none}
+.btn:disabled,.btn2:disabled{opacity:.45;cursor:not-allowed}
+input,select,textarea{border:1.5px solid #cbd5e1;border-radius:.55rem;padding:.55rem .7rem;width:100%;background:#fff;color:#0f172a}
+input[type=file]{padding:.45rem .6rem} input[type=range]{padding:0} input[type=checkbox],input[type=radio]{width:auto}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--pri);border-color:transparent}
+label{font-size:.83rem;font-weight:600;display:block;margin-bottom:.3rem}
+.card{background:#fff;border-radius:1rem;box-shadow:0 8px 30px rgba(15,23,42,.08);padding:1.4rem}
+article p{margin:.7rem 0;line-height:1.75;color:#334155}
+article h2{font-size:1.45rem;font-weight:800;margin:1.6rem 0 .4rem;color:#0f172a}
+.faq{background:#fff;border-radius:.7rem;padding:.9rem 1.1rem;margin:.55rem 0;box-shadow:0 2px 10px rgba(15,23,42,.05)}
+.faq summary{font-weight:700;cursor:pointer}
+table.dt{width:100%;border-collapse:collapse} table.dt th,table.dt td{border:1px solid #e2e8f0;padding:.45rem .6rem;text-align:left;font-size:.9rem}
+table.dt th{background:#f1f5f9}
+.drop{border:2px dashed #94a3b8;border-radius:.8rem;padding:1.1rem;text-align:center;background:#f8fafc}
+canvas.prev{max-width:100%;border:1px solid #e2e8f0;border-radius:.5rem;background:#fff}
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "PicPeel", "url": "https://picpeel.fixoraa.tech/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free PDF image extractor. Pull the original embedded photos and graphics out of any PDF at full quality, with an inventory of size, format and page \u2014 no re-rendering."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is this different from converting PDF pages to images?", "acceptedAnswer": {"@type": "Answer", "text": "Rendering gives you a picture of a whole page at a chosen zoom. PicPeel extracts the actual embedded image files \u2014 original pixels, no page around them \u2014 which is what you want for reuse, editing and archiving."}}, {"@type": "Question", "name": "Why did my scanned PDF return one image per page?", "acceptedAnswer": {"@type": "Answer", "text": "A scan stores each page as a single full-page image, so that image is the embedded original. You are getting the scan itself, at the best quality the file contains."}}, {"@type": "Question", "name": "What format do extracted images download in?", "acceptedAnswer": {"@type": "Answer", "text": "PNG \u2014 lossless and universally supported. Photographs embedded as JPEG are decoded pixel-faithfully into PNG, so dimensions and content are preserved exactly."}}, {"@type": "Question", "name": "Can I skip logos and tiny graphics?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Raise the minimum-width filter before scanning and only images at least that wide are listed \u2014 ideal for pulling the real photography out of designed documents."}}, {"@type": "Question", "name": "Why is an extracted photo still low resolution?", "acceptedAnswer": {"@type": "Answer", "text": "Extraction preserves what the PDF actually embeds; it cannot invent pixels. If the creator embedded an 800-pixel image, that is the best copy the file holds."}}, {"@type": "Question", "name": "Are my PDFs uploaded anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. The scan and decoding run entirely in your browser. Neither the document nor its images ever leave your device."}}]}</script>
+</head>
+<body id="top">
+<header class="sticky top-0 z-40 shadow-md" style="background:#78350F">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between">
+    <a href="#top" class="text-xl font-extrabold tracking-tight" style="color:#FFFBEB">🥕 PicPeel</a>
+    <nav class="flex gap-5 text-sm font-semibold" style="color:#FFFBEB">
+      <a href="#top" class="hover:underline">Home</a>
+      <a href="https://fixoraa.tech" class="hover:underline">More Tools</a>
+    </nav>
+  </div>
+</header>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pt-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <div class="origin-top scale-[0.44] sm:scale-100 shrink-0">
+        <script>
+          atOptions = { 'key' : '4e68ac77881c17fe128a46565d9a4e8c', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+        </script>
+        <script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="mx-auto max-w-6xl px-4 sm:px-6 py-8">
+  <div class="text-center mb-6">
+    <h1 class="text-3xl sm:text-4xl font-extrabold" style="color:#0f172a">Extract Images from a PDF — Original Quality</h1>
+    <p class="mt-2 text-slate-600 max-w-2xl mx-auto">The photos inside your PDF are trapped at the quality the file was built with — until now. PicPeel finds every embedded image, lists it with its page and dimensions, and lets you download the originals, untouched.</p>
+    <span class="inline-block mt-3 px-3 py-1 rounded-full text-xs font-bold text-white pri">✓ Unlimited Free Usage — No Signup, No Watermark</span>
+    <p class="mt-2 text-xs text-slate-500">🔒 100% private: your file is processed entirely in your browser and never uploaded to any server.</p>
+  </div>
+  <div class="grid md:grid-cols-5 gap-6">
+  <div class="card md:col-span-2 space-y-3">
+    <div class="drop"><label>Your PDF</label><input id="file" type="file" accept="application/pdf"></div>
+    <div><label>Minimum width (px) — filters out tiny logos &amp; spacers</label><input id="minw" type="number" value="80"></div>
+    <button class="btn w-full" id="go" onclick="run()">Find Embedded Images</button>
+    <button class="btn2 w-full" id="dlall" style="display:none" onclick="dlAll()">⬇ Download all (one by one)</button>
+    <p id="status" class="text-sm font-semibold"></p>
+  </div>
+  <div class="card md:col-span-3">
+    <h3 class="font-bold mb-2">Image inventory</h3>
+    <div id="inv" class="text-sm text-slate-600">Choose a PDF and PicPeel will list every embedded image it contains — with its page, pixel dimensions and a download button for each original.</div>
+  </div></div>
+</main>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pb-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="464498"></script>
+    </div>
+  </div>
+</div>
+<section class="mx-auto max-w-4xl px-4 sm:px-6 pb-6">
+  <article>
+  <h2>The images inside a PDF are files within a file</h2>
+<p>A PDF is a container. Alongside its text and layout instructions it stores complete image files — the product photo, the scanned signature, the chart, the logo — each embedded at the resolution its creator chose. When you screenshot a PDF page or render it to an image, you get a picture of the page at whatever zoom you happened to choose. When you extract the embedded image itself, you get the original asset: every pixel the file actually contains, with no re-sampling, no screen resolution ceiling and no page furniture attached.</p>
+<p>PicPeel performs that extraction properly. It walks each page's drawing instructions, collects the image objects the page actually paints, and decodes each one at its native dimensions. The inventory then shows you what was found — page, pixel size, file weight — so you can pick exactly the assets you need instead of fishing blindly. Small interface debris is filtered by the minimum-width setting, which quietly removes the one-pixel spacers and tiny bullets that litter production PDFs.</p>
+<h2>Extraction versus rendering: know which you need</h2>
+<p>These two jobs are constantly confused, and choosing wrong wastes an afternoon. If you need a picture of how a page looks — for a thumbnail, a social post, a slide — you want rendering: the whole page, flattened, at a chosen resolution. If you need the photograph that sits on page three, at the best quality the file holds, you want extraction: the image alone, exactly as embedded. PicPeel is firmly the second tool, and its inventory makes the distinction visible: a page with one photo and a logo yields two entries, not one page picture.</p>
+<p>One honest boundary follows from how PDFs store scans. A scanned document page is itself a single full-page image, so extraction returns the whole page as one image — which is, in fact, the original scan, at full quality. That is often exactly what archivists want. But if a PDF was built purely from vector shapes and text, there may be no embedded images at all, and PicPeel will report an empty inventory rather than inventing results.</p>
+<h2>How to extract images, step by step</h2>
+<p>Choose your PDF and press Find Embedded Images. The scan proceeds page by page — image-heavy documents announce their progress — and each discovered image appears in the inventory with a live preview, its source page, its true pixel dimensions and its weight as a PNG. Set the minimum width before scanning if the document is a designed brochure: raising it to a few hundred pixels keeps only substantive photography and skips logos, rules and icons.</p>
+<p>Download individually the images you came for, or use Download All to save the whole set one after another — browsers handle that as a short sequence of downloads. Check dimensions against your purpose: an image embedded at 800 pixels wide will look soft printed across a full page no matter how it was extracted, because extraction preserves quality, it cannot create it. What the file holds is what you get — which is precisely the guarantee you want.</p>
+<h2>Where extracted images earn their keep</h2>
+<p>The classic case is the rebuilt presentation: the report is gone, the PDF survives, and marketing needs the product photos back at full quality for the new website. Extraction recovers them in minutes. Designers pull charts and diagrams from proceedings volumes; teachers lift figures from journal PDFs for lecture slides; families recover photographs that were emailed inside PDF newsletters and albums long ago; support teams extract the exact screenshots embedded in vendor manuals.</p>
+<p>There is also a forensic pleasure to it: the inventory itself is information. A document claiming to be a simple memo that turns out to embed forty high-resolution photographs tells a story about how it was assembled. Knowing precisely which assets a PDF carries — and their real resolutions — is useful intelligence before you reuse, reprint or republish anything from it.</p>
+<h2>Formats, colour and other practical notes</h2>
+<p>Images live inside PDFs in several encodings — JPEG photographs, lossless graphics, grayscale scans, raw device colour data. PicPeel decodes what the file's own rendering engine decodes and delivers each image as a PNG, the universal lossless format every editor opens. Where an embedded original was a JPEG, the PNG is a faithful pixel-for-pixel decode of it at the same dimensions; file size may grow because PNG does not re-compress, but no pixel changes and no new artefacts are introduced.</p>
+<p>Very large images are limited only by your device's memory, and duplicates are handled sensibly: an image object painted several times on one page is listed once for that page. If an exotic encoding cannot be decoded in the browser, that image is skipped and the rest of the inventory still arrives — a partial harvest honestly reported beats a failed job with nothing to show.</p>
+<h2>Privacy: extraction without exposure</h2>
+<p>Documents whose images are worth extracting are often documents that should not wander: unreleased product photography, internal reports, personal albums, evidence bundles. PicPeel reads the file inside your browser tab and decodes images in your device's memory. Nothing is uploaded, cached on a server or retained after you close the tab — the extracted PNGs go straight from your machine to your downloads folder.</p>
+<p>That locality also removes the usual friction: no upload wait on a two-hundred-megabyte catalogue, no per-file credits, no watermark stamped across recovered assets. The original images come out as original as the PDF allows — which is the entire promise of extraction, kept privately.</p>
+<h2>Proving what an extracted image is worth</h2>
+<p>Before reusing an extracted image at a new size, compare its pixel dimensions with the space it must fill: print needs roughly 300 pixels per inch, screens about half that, and no extraction can repeal that arithmetic. Keep extracted originals in a folder named for their source document, because provenance evaporates fast — an image called 'diagram-final' is a mystery in a year, while one stored beside its PDF explains itself. If an image you expected is missing from the inventory, it may be drawn as vector shapes or masked unusually; a rendered page image is then the honest fallback. Finally, respect rights: extraction recovers assets mechanically, but reuse still answers to whoever owns the photographs.</p>
+  <h2>Frequently Asked Questions</h2>
+  <details class="faq"><summary>How is this different from converting PDF pages to images?</summary><p>Rendering gives you a picture of a whole page at a chosen zoom. PicPeel extracts the actual embedded image files — original pixels, no page around them — which is what you want for reuse, editing and archiving.</p></details>
+<details class="faq"><summary>Why did my scanned PDF return one image per page?</summary><p>A scan stores each page as a single full-page image, so that image is the embedded original. You are getting the scan itself, at the best quality the file contains.</p></details>
+<details class="faq"><summary>What format do extracted images download in?</summary><p>PNG — lossless and universally supported. Photographs embedded as JPEG are decoded pixel-faithfully into PNG, so dimensions and content are preserved exactly.</p></details>
+<details class="faq"><summary>Can I skip logos and tiny graphics?</summary><p>Yes. Raise the minimum-width filter before scanning and only images at least that wide are listed — ideal for pulling the real photography out of designed documents.</p></details>
+<details class="faq"><summary>Why is an extracted photo still low resolution?</summary><p>Extraction preserves what the PDF actually embeds; it cannot invent pixels. If the creator embedded an 800-pixel image, that is the best copy the file holds.</p></details>
+<details class="faq"><summary>Are my PDFs uploaded anywhere?</summary><p>No. The scan and decoding run entirely in your browser. Neither the document nor its images ever leave your device.</p></details>
+  </article>
+</section>
+<footer class="mt-6 py-8" style="background:#78350F;color:#FFFBEB">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 text-center text-sm">
+    <p class="font-bold text-base">PicPeel</p>
+    <p class="opacity-80 mt-1">Free PDF image extractor. Pull the original embedded photos and graphics out of any PDF at full quality, with an inventory of size, format and page — no re-rendering.</p>
+    <p class="mt-2"><a href="#top" class="underline">Home</a> · <a href="https://fixoraa.tech" class="underline">More Tools</a></p>
+    <p class="fx-credit" style="text-align:center;font-size:12.5px;opacity:.62;margin:10px auto 2px;letter-spacing:.01em">Made by <a href="https://fixoraa.tech" target="_blank" rel="noopener" style="color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:2px">Fixoraa</a></p>
+  </div>
+</footer>
+<script>
+
+const $=id=>document.getElementById(id);
+function fmtBytes(b){if(b===0)return '0 B';const k=1024,s=['B','KB','MB','GB'];const i=Math.floor(Math.log(b)/Math.log(k));return (b/Math.pow(k,i)).toFixed(i?1:0)+' '+s[i];}
+function setStatus(m,ok){const el=$('status');if(!el)return;el.textContent=m;el.style.color=ok===false?'#dc2626':'inherit';}
+function download(bytes,name,type){const blob=bytes instanceof Blob?bytes:new Blob([bytes],{type:type||'application/pdf'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},800);}
+async function readFile(input){const f=input.files&&input.files[0];if(!f)throw new Error('Please choose a PDF file first.');return {file:f,buf:await f.arrayBuffer()};}
+function showDl(id,bytes,name){const b=$(id);b.style.display='inline-block';b.onclick=()=>download(bytes,name);}
+
+
+let found=[];
+async function run(){
+  const btn=$('go'); btn.disabled=true; found=[];
+  try{
+    const {buf}=await readFile($('file'));
+    const doc=await pdfjsLib.getDocument({data:buf}).promise;
+    const minw=parseInt($('minw').value)||0;
+    for(let i=1;i<=doc.numPages;i++){
+      const page=await doc.getPage(i);
+      const ops=await page.getOperatorList();
+      const seen=new Set();
+      for(let j=0;j<ops.fnArray.length;j++){
+        const fn=ops.fnArray[j];
+        if(fn===pdfjsLib.OPS.paintImageXObject||fn===pdfjsLib.OPS.paintJpegXObject){
+          const name=ops.argsArray[j][0];
+          if(seen.has(name)) continue; seen.add(name);
+          try{
+            const img=await new Promise((res,rej)=>{ page.objs.get(name,r=>r?res(r):rej(new Error('no img'))); });
+            const w=img.width, h=img.height; if(!w||w<minw) continue;
+            const cv=document.createElement('canvas'); cv.width=w; cv.height=h;
+            const ctx=cv.getContext('2d');
+            if(img.bitmap){ ctx.drawImage(img.bitmap,0,0); }
+            else if(img.data){ const id=ctx.createImageData(w,h); const d=img.data; if(img.kind===2){ for(let k=0,m=0;k<d.length;k+=3,m+=4){ id.data[m]=d[k]; id.data[m+1]=d[k+1]; id.data[m+2]=d[k+2]; id.data[m+3]=255; } } else if(img.kind===1){ for(let k=0,m=0;k<d.length;k++,m+=4){ const g=d[k]; id.data[m]=g; id.data[m+1]=g; id.data[m+2]=g; id.data[m+3]=255; } } else { continue; } ctx.putImageData(id,0,0); }
+            else continue;
+            const blob=await new Promise(r=>cv.toBlob(r,'image/png'));
+            found.push({page:i,w,h,blob,url:URL.createObjectURL(blob)});
+          }catch(e){ /* skip unreadable object */ }
+        }
+      }
+      setStatus('Scanning page '+i+' of '+doc.numPages+'… found '+found.length+' so far.');
+    }
+    if(!found.length){ $('inv').innerHTML='No embedded images at or above the minimum width were found. The pages may be vector drawings or full-page scans (a scan is one big image per page — lower the minimum width, or use PageToPix-style rendering instead).'; setStatus('Scan complete — no images matched.'); }
+    else{
+      $('inv').innerHTML='<div class="grid sm:grid-cols-2 gap-3">'+found.map((f,ix)=>'<div class="p-2 rounded-lg bg-amber-50"><img src="'+f.url+'" style="width:100%;height:130px;object-fit:contain;background:#fff;border-radius:6px"><div class="mt-1 font-semibold">Page '+f.page+' · '+f.w+'×'+f.h+' px · '+fmtBytes(f.blob.size)+'</div><button class="btn2 mt-1" onclick="dlOne('+ix+')">⬇ Download PNG</button></div>').join('')+'</div>';
+      $('dlall').style.display='inline-block';
+      setStatus('Done ✔ Found '+found.length+' embedded image(s).');
+    }
+  }catch(e){ setStatus('⚠ '+(e.message||e),false); }
+  btn.disabled=false;
+}
+function dlOne(ix){ download(found[ix].blob,'picpeel-page'+found[ix].page+'-'+(ix+1)+'.png'); }
+function dlAll(){ found.forEach((f,ix)=>setTimeout(()=>dlOne(ix), ix*450)); }
+
+</script>
+</body>
+</html>
